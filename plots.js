@@ -35,5 +35,18 @@ function buildMetadata(sample) {
     PANEL.append("h6").text("LOCATION: " + result.location);
     PANEL.append("h6").text("BBTYPE: " + result.bbtype);
     PANEL.append("h6").text("WFREQ: " + result.wfreq);
+    console.log("ID: " + result.id)
+    console.log("ETHNICITY: " + result.ethnicity)
+    console.log("GENDER: " + result.gender)
+    console.log("AGE: " + result.age)
+    console.log("LOCATION: " + result.location)
+    console.log("BBTYPE: " + result.bbtype)
+    console.log("WFREQ: " + result.wfreq)
+
   });
+}
+
+function buildCharts(sample) {
+console.log("running buildCharts()")
+
 }
