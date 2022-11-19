@@ -55,7 +55,7 @@ function buildMetadata(sample) {
 
 // 1. Create the buildCharts function.
 function buildCharts(sample) {
-  console.log("sample: " + sample)
+  // console.log("sample: " + sample)
   // 2. Use d3.json to load and retrieve the samples.json file 
   d3.json("samples.json").then((data) => {
     // 3. Create a variable that holds the samples array. 
@@ -85,7 +85,7 @@ function buildCharts(sample) {
     // to retrieve the top 10 otu_ids sorted in descending order.
 
     let yticks = otu_ids.slice(0,10).reverse().map(function (eachID) {return `OTU ${eachID}`});
-    console.log(yticks.slice(0,10).reverse())
+    // console.log(yticks.slice(0,10).reverse())
     let xticks = sample_values.slice(0,10).reverse();
     let labels = otu_labels.slice(0,10).reverse();
 
@@ -107,5 +107,32 @@ function buildCharts(sample) {
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", [barData], barLayout);
 
+  });
+}
+
+
+
+// Bar and Bubble charts
+// Create the buildCharts function.
+function buildCharts(sample) {
+  // Use d3.json to load and retrieve the samples.json file 
+  d3.json("samples.json").then((data) => {
+    
+
+    // Deliverable 1 Step 10. Use Plotly to plot the data with the layout. 
+    Plotly.newPlot(); 
+
+    // 1. Create the trace for the bubble chart.
+    var bubbleData = [
+   
+    ];
+
+    // 2. Create the layout for the bubble chart.
+    var bubbleLayout = {
+      
+    };
+
+    // 3. Use Plotly to plot the data with the layout.
+    Plotly.newPlot(); 
   });
 }
