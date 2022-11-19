@@ -97,11 +97,12 @@ function buildCharts(sample) {
       y: yticks,
       type: 'bar',
       orientation: 'h',
-      text: otu_labels
+      text: labels
     };
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-     
+      title: "Top 10 Bacteria Cultures Found",
+
     };
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", [barData], barLayout);
