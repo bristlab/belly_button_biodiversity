@@ -132,13 +132,10 @@ function buildCharts(sample) {
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot("bubble", [bubbleData], bubbleLayout);   
 
-
-
+    
     // 1. Create a variable that filters the metadata array for the object with the desired sample number.
     var resultArray = data.metadata.filter(sampleObj => sampleObj.id == sample);
-    
-    
-    
+
     // 2. Create a variable that holds the first sample in the metadata array.
     var result = resultArray[0];
 
@@ -156,6 +153,7 @@ function buildCharts(sample) {
         value: wash_frequency,
 
         gauge: {
+          bar: { color: "darkblue" },
           axis: {
             range: [null, 10],
             tickmode: "array",
@@ -172,7 +170,7 @@ function buildCharts(sample) {
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
-    Plotly.newPlot("gauge", gaugeData, gaugeLayout, {responsive: true});
+    Plotly.newPlot("gauge", gaugeData, gaugeLayout);
 
     
   });
