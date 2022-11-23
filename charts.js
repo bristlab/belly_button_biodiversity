@@ -159,7 +159,14 @@ function buildCharts(sample) {
             tickmode: "array",
             tickvals: [0,2,4,6,8,10],
             ticktext: [0,2,4,6,8,10]
-          }
+          },
+          steps: [
+            { range: [0, 2], color: "red" },
+            { range: [2, 4], color: "orange" },
+            { range: [4, 6], color: "yellow" },
+            { range: [6, 8], color: "lightgreen" },
+            { range: [8, 10], color: "green" }
+          ],
         }
       }
     ];
